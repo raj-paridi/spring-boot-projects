@@ -11,11 +11,15 @@ import java.util.List;
 @RestController
 public class StudentController {
 
+    // GET Rest api returning a bean as a json
+    // http://localhost:8080/student
     @GetMapping("student")
     public Student getStudent() {
         return new Student(100, "Raju");
     }
 
+    // GET Rest api returning a list of beans as json
+    // http://localhost:8080/students
     @GetMapping("students")
     public List<Student> getStudents() {
         List<Student> students = new ArrayList<>();
@@ -27,7 +31,7 @@ public class StudentController {
 
     // Rest api with path variable
     // id -> URI template variable
-    // http://localhost:8080/students/1/hanika
+    // http://localhost:8080/students/1/hanvika
     @GetMapping("students/{id}/{name}")
     public Student getStudentWithPathVariable(@PathVariable int id,
                                               @PathVariable("name") String studentName) {
