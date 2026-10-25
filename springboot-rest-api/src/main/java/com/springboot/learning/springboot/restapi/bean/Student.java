@@ -1,8 +1,8 @@
 package com.springboot.learning.springboot.restapi.bean;
 
 public class Student {
-    private int id;
-    private String name;
+    private final int id;
+    private final String name;
 
     public Student(int id, String name) {
         this.id = id;
